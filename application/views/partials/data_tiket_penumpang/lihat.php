@@ -131,6 +131,8 @@
                                 echo "<button class='btn btn-danger fw-bold' type='button' disabled>Batalkan Tiket</button>";
                             } elseif ($tk->status_paid == 1) {
                                 echo "<a href='$link' class='btn btn-danger fw-bold' type='button'>Batalkan Tiket</a>";
+                            } else {
+                                echo "<button class='btn btn-danger fw-bold' type='button' disabled>Batalkan Tiket</button>";
                             }
                             ?>
 
