@@ -145,8 +145,40 @@ class Data_manifest extends CI_Controller
             $this->load->view('templates/footer');
         }
     }
-    public function Edit_data_manifest($id)
+    public function Edit_status_manifest($id)
     {
+
+        $where = array('id_manifest' => $id,);
+
+
+        $data = [
+            'title' => "Edit Data Manifest",
+            'manifest' => $this->Manifest_model->lihat_manifest_id($where)->result()
+        ];
+        $this->load->view('templates/header_sidebar', $data);
+        $this->load->view('partials/manifest/lihat_manifest', $data);
+        $this->load->view('templates/footer');
+        // var_dump($data);
+    }
+    public function ubah_status()
+    {
+        $data = array(
+            'id_manifest' =>  $id = $this->input->post('id_manifest'),
+            'status_paid' => $this->input->post('pembayaran'),
+            'status_checkin' => $this->input->post('checkin'),
+            'status_print' => $this->input->post('print')
+        );
+
+        $where = array('id_manifest' => $id,);
+        // var_dump($data, $where);
+        $this->Manifest_model->update_manifest($where, $data);
+        redirect('Data_manifest');
+    }
+    public function hapus_manifest($id)
+    {
+        $where = array('id_manifest' => $id,);
+        $this->Manifest_model->hapus_manifest($where);
+        redirect('Data_manifest');
     }
 }
 

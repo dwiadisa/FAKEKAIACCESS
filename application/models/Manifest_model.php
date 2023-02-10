@@ -49,7 +49,17 @@ class Manifest_model extends CI_Model
 
     public function lihat_manifest_id($where)
     {
-        return $this->db->get_where('data_manifest', $where);
+        return $this->db->get_where('data_manifest_lengkap', $where);
+    }
+
+    public function update_manifest($where, $data)
+    {
+        $this->db->where($where);
+        $this->db->update('data_manifest', $data);
+    }
+    public function hapus_manifest($where)
+    {
+        $this->db->delete('data_manifest', $where);
     }
 }
 
