@@ -23,7 +23,7 @@ class Pesan_tiket_ka extends CI_Controller
 
 
         $data = [
-            'title' => " Tambah Data Manifest",
+            'title' => "Pesan Tiket KA",
             'relasi' => $this->Relasi_model->lihat_relasi()->result(),
             'data_stasiun' => $this->Stasiun_model->lihat_stasiun()->result()
 
@@ -85,7 +85,7 @@ class Pesan_tiket_ka extends CI_Controller
             );
 
             $this->Manifest_model->tambah_manifest($data);
-            echo "data sukses";
+            redirect('Data_tiket_penumpang');
         } else {
             $where = array(
                 'id_relasi' =>  $this->input->post('relasi')

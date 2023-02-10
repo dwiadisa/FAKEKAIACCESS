@@ -47,8 +47,9 @@ class Manifest_model extends CI_Model
         $this->db->insert('data_manifest', $data);
     }
 
-    public function lihat_manifest_id()
+    public function lihat_manifest_id($where)
     {
+        return $this->db->get_where('data_manifest', $where);
     }
 }
 

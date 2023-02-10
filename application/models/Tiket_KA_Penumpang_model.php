@@ -21,6 +21,23 @@ class Tiket_KA_Penumpang_model extends CI_Model
 
         return $this->db->get_where('data_penumpang', $where);
     }
+
+    public function load_tiket_penumpang()
+    {
+        $session_penump = $this->session->userdata('id_user');
+        $this->db->select('*');
+        $this->db->from('data_manifest_lengkap');
+        $this->db->where('penumpang', $session_penump);
+        $this->db->order_by("id_relasi", "desc");
+
+        $query = $this->db->get();
+        return $query;
+    }
+
+    public function lihat_tiket_penumpang($where)
+    {
+        return $this->db->get_where('data_manifest_lengkap', $where);
+    }
 }
 
 

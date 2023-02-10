@@ -1,7 +1,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Tambah Data Manifest</h1>
+        <h1>Tambah Data Pemesanan</h1>
 
     </div><!-- End Page Title -->
 
