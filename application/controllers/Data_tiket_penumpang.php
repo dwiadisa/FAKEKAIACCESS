@@ -39,6 +39,12 @@ class Data_tiket_penumpang extends CI_Controller
         $this->load->view('partials/data_tiket_penumpang/lihat', $data);
         $this->load->view('templates/footer');
     }
+    public function batal($id)
+    {
+        $where =  $id;
+        $this->Tiket_KA_Penumpang_model->batal($where);
+        redirect('Data_tiket_penumpang');
+    }
 }
 
 /* End of file Data_tiket_penumpang.php and path \application\controllers\Data_tiket_penumpang.php */

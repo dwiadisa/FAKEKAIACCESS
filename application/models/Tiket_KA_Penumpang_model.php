@@ -38,6 +38,13 @@ class Tiket_KA_Penumpang_model extends CI_Model
     {
         return $this->db->get_where('data_manifest_lengkap', $where);
     }
+
+    public function batal($where)
+    {
+        $this->db->set('status_paid', 3);
+        $this->db->where('kode_reservasi', $where);
+        $this->db->update('data_manifest');
+    }
 }
 
 

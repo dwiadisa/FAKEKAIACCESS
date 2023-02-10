@@ -22,7 +22,20 @@
 
                     <div class="card info-card customers-card border border-primary">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $tk->nama_kereta ?><span> | <?php echo $tk->kode_kereta ?></span></h5>
+                            <h5 class="card-title"><?php echo $tk->nama_kereta ?><span> | <?php echo $tk->kode_kereta ?></span>
+                                <span> <?php
+
+                                        if ($tk->status_paid == 1) {
+                                            echo " <span class='badge text-bg-success'>Pembayaran Lunas</span>";
+                                        } elseif ($tk->status_paid == 0) {
+                                            echo " <span class='badge text-bg-danger'>Belum Lunas</span>";
+                                        } else {
+                                            echo " <span class='badge text-bg-secondary'>Batal</span>";
+                                        }
+
+
+                                        ?></span>
+                            </h5>
 
                             <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">

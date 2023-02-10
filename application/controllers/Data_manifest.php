@@ -145,6 +145,9 @@ class Data_manifest extends CI_Controller
             $this->load->view('templates/footer');
         }
     }
+    public function Edit_data_manifest($id)
+    {
+    }
 }
 
 /* End of file Data_manifest.php and path \application\controllers\Data_manifest.php */
