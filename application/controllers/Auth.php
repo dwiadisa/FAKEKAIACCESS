@@ -64,7 +64,7 @@ class Auth extends CI_Controller
 
                 $this->session->set_userdata($data_session);
 
-                redirect('dashboard');
+                redirect('Pesan_tiket_ka');
                 # code...
             } else {
 
