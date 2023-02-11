@@ -15,6 +15,8 @@ class Pesan_tiket_ka extends CI_Controller
         $this->load->model('Stasiun_model');
         $this->load->model('Penumpang_model');
         $this->load->model('Tiket_KA_Penumpang_model');
+        $this->load->model('Acces_block_model');
+        $this->Access_block_model->block_admin();
     }
 
 

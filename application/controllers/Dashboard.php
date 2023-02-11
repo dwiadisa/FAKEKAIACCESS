@@ -8,6 +8,8 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         // memuat hitung dalam database
+        $this->load->model('Acces_block_model');
+        $this->Access_block_model->block_penumpang();
         if (!is_login()) redirect('auth?alert=belum_login');
         $this->load->model('hitung_model');
     }

@@ -13,6 +13,8 @@ class Data_manifest extends CI_Controller
         $this->load->model('Kereta_api_model');
         $this->load->model('Stasiun_model');
         $this->load->model('Penumpang_model');
+        $this->load->model('Acces_block_model');
+        $this->Access_block_model->block_penumpang();
     }
 
     public function index()

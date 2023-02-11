@@ -7,6 +7,8 @@ class Data_Kereta extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Acces_block_model');
+        $this->Access_block_model->block_penumpang();
         if (!is_login()) redirect('auth?alert=belum_login');
         $this->load->model('Kereta_api_model');
     }

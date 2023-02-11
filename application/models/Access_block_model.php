@@ -5,9 +5,15 @@ class Access_block_model extends CI_Model
 {
     public function block_admin()
     {
+        if ($this->session->userdata('hak_akses') !== "admin") {
+            redirect('halaman_blokir/403');
+        }
     }
     public function block_penumpang()
     {
+        if ($this->session->userdata('hak_akses') == "penumpang") {
+            redirect('halaman_blokir/403');
+        }
     }
 }
 

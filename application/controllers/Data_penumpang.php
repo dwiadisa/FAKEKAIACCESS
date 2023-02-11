@@ -9,6 +9,8 @@ class Data_penumpang extends CI_Controller
         parent::__construct();
         if (!is_login()) redirect('auth?alert=belum_login');
         $this->load->model('Penumpang_model');
+        $this->load->model('Acces_block_model');
+        $this->Access_block_model->block_penumpang();
     }
 
     public function index()
