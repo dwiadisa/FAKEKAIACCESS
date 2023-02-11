@@ -68,7 +68,7 @@ class Auth extends CI_Controller
                 # code...
             } else {
 
-                echo "login gagal";
+                redirect('Auth');
             }
         } else {
             redirect('Auth');

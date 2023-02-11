@@ -8,7 +8,7 @@ class Data_relasi extends CI_Controller
     {
         parent::__construct();
         if (!is_login()) redirect('auth?alert=belum_login');
-        $this->load->model('Acces_block_model');
+        $this->load->model('Access_block_model');
         $this->Access_block_model->block_penumpang();
         $this->load->model('Relasi_model');
         $this->load->model('Stasiun_Model');

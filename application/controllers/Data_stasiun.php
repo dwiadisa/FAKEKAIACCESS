@@ -9,7 +9,7 @@ class Data_stasiun extends CI_Controller
         parent::__construct();
         $this->load->model('Stasiun_model');
         if (!is_login()) redirect('auth?alert=belum_login');
-        $this->load->model('Acces_block_model');
+        $this->load->model('Access_block_model');
         $this->Access_block_model->block_penumpang();
     }
 

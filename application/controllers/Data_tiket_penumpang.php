@@ -9,8 +9,8 @@ class Data_tiket_penumpang extends CI_Controller
         parent::__construct();
         $this->load->model('Tiket_KA_Penumpang_model');
         if (!is_login()) redirect('auth?alert=belum_login');
-        $this->load->model('Acces_block_model');
-        $this->Access_block_model->block_admin();
+        // $this->load->model('Access_block_model');
+        // $this->Access_block_model->block_admin();
     }
 
     public function index()
