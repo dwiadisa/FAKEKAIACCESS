@@ -11,11 +11,11 @@ class Halaman_blokir extends CI_Controller
 
     public function blokir_403()
     {
-        $this->load->view('blokir/403');
+        $this->load->view('block/403');
     }
     public function blokir_404()
     {
-        $this->load->view('blokir/404');
+        $this->load->view('block/404');
     }
 }
 
