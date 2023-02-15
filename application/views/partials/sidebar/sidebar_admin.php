@@ -8,6 +8,11 @@
     </li><!-- End Dashboard Nav -->
 
     <li class="nav-item">
+        <a class="nav-link collapsed" href="<?php echo base_url('data_admin') ?>">
+            <i class="bi bi-person-rolodex"></i>
+            <span>Data Admin</span>
+        </a>
+    <li class="nav-item">
         <a class="nav-link collapsed" href="<?php echo base_url('data_penumpang') ?>">
             <i class="bi bi-people"></i>
             <span>Data Penumpang</span>
